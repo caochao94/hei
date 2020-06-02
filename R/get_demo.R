@@ -9,6 +9,7 @@
 #' \item "2009/2010"
 #' \item "2011/2012"
 #' \item "2013/2014"
+#' \item "2015/2016"
 #' }
 #' @return Object of class \code{data.frame} containing a modified NHANES demographic data set for a specified year. The complete NHANES demographic data set contains several more variables than are necessary for computing HEI scores. In fact, the only variable contained in the returned data set (in addition to an NHANES unique sequence identifier for each participant) is not, strictly speaking, even required itself, but becomes relevant if data sets from multiple separate NHANES iterations are concatenated, specifically:
 #' \itemize{
@@ -27,7 +28,8 @@ get_demo <- function(year) {
                      "E" = "2007/2008",
                      "F" = "2009/2010",
                      "G" = "2011/2012",
-                     "H" = "2013/2014")
+                     "H" = "2013/2014",
+                     "I" = "2015/2016")
 
     try(if(!year %in% yearchoices)
         stop("must use valid year choice, see ?get_demo for valid choices",
