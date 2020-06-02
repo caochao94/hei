@@ -9,6 +9,7 @@
 #' \item "2009/2010"
 #' \item "2011/2012"
 #' \item "2013/2014"
+#' \item "2015/2016"
 #' }
 #' @param day identifier for survey day to retrieve ... must be one of the following:
 #' \itemize{
@@ -37,10 +38,11 @@
 get_diet <- function(year, day) {
 
     yearchoices <- c("D" = "2005/2006",
-                     "E"= "2007/2008",
-                     "F"="2009/2010",
-                     "G"= "2011/2012",
-                     "H" = "2013/2014")
+                     "E" = "2007/2008",
+                     "F" = "2009/2010",
+                     "G" = "2011/2012",
+                     "H" = "2013/2014",
+                     "I" = "2015/2016")
 
     try(if(!year %in% yearchoices)
         stop("must use valid year choice, see ?get_diet for valid choices",
