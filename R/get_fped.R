@@ -9,6 +9,7 @@
 #' \item "2009/2010"
 #' \item "2011/2012"
 #' \item "2013/2014"
+#' \item "2015/2016"
 #' }
 #' @param day identifier for survey day to retrieve ... must be one of the following:
 #' \itemize{
@@ -45,10 +46,11 @@
 get_fped <- function(year, day) {
 
     yearchoices <- c("fped0506" = "2005/2006",
-                     "fped0708"= "2007/2008",
-                     "fped0910"="2009/2010",
-                     "fped1112"= "2011/2012",
-                     "fped1314" = "2013/2014")
+                     "fped0708" = "2007/2008",
+                     "fped0910" = "2009/2010",
+                     "fped1112" = "2011/2012",
+                     "fped1314" = "2013/2014",
+                     "fped1516" = "2015/2016")
 
     daychoices <- c("both" = "both",
                     "day1" = "first",
